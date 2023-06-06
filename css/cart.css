@@ -895,6 +895,12 @@ screen and (min-width: 40em) {
   color: #ff9500;
 }
 
+.cart-form .radio-group .radio-box label span{
+  padding: 0;
+  font-size: .75rem;
+  color: #999;
+}
+
 @media print,
 screen and (min-width: 64em) {
   .cart-form .radio-group {
@@ -907,6 +913,7 @@ screen and (min-width: 64em) {
 
   .cart-form .radio-group .radio-box label {
     padding-left: 2rem;
+    margin-right: 0;
     font-size: 1.125rem;
   }
 }
@@ -1945,7 +1952,7 @@ screen and (min-width: 64em) {
 .cart-form--payment img {
   margin-left: 0.75rem;
   transform: translateY(-1px);
-  width: 2.375rem;
+  height: 1.4375rem;
 }
 
 .cart-form--craditcard {
@@ -1965,7 +1972,7 @@ screen and (min-width: 64em) {
   }
 
   .cart-form--payment img {
-    margin-left: 1.25rem;
+    margin-left: 1rem;
   }
 }
 

@@ -364,26 +364,25 @@
                   <div class="radio-group grid-x">
                     <fieldset class="radio-box">
                       <input class="radiobox" type="radio" id="payment1" name="payment" value="橘子支付" v-model="payType">
-                      <label for="payment1">橘子支付 <img src="images/gamapay.png"></label>
+                      <label for="payment1">橘子支付<img src="images/gamapay.png"></label>
                     </fieldset>
                     <fieldset class="radio-box">
                       <input class="radiobox" type="radio" id="payment2" name="payment" value="信用卡" v-model="payType">
-                      <label for="payment2">信用卡 <img src="images/craditcard.png"></label>
+                      <label for="payment2">信用卡<img src="images/craditcard.png"></label>
+                    </fieldset>
+                    <fieldset class="radio-box">
+                      <input class="radiobox" type="radio" id="payment3" name="payment" value="全家門市" v-model="payType">
+                      <label for="payment3">全家門市 <span>(僅適用手機裝置支付)</span><img src="images/familymart.png"></label>
                     </fieldset>
 
                     <!-- <fieldset class="radio-box">
-                      <input class="radiobox" type="radio" id="payment3" name="payment" value="全家門市">
-                      <label for="payment3">全家門市 <img src="images/familymart.png"></label>
-                    </fieldset>
-
-                    <fieldset class="radio-box">
                       <input class="radiobox" type="radio" id="payment4" name="payment" value="beanfun! Coin">
                       <label for="payment4">beanfun! Coin <img src="images/bf!coin.png"></label>
                     </fieldset> -->
                   </div>
                 </div>
                 <!-- ↓ C2C選到「全家門市」時，才出現的訊息 B2C不顯示-->
-                <!-- <p class="is-error show-msg text-orange fammart-info">*使用全家門市支付，將於超商結帳時額外酌收30元手續費。</p> -->
+                <p class="is-error show-msg text-orange fammart-info cart-form__subitem" v-if="payType === '全家門市'">*使用全家門市付款，將於超商結帳時額外酌收30元手續費。</p>
 
                 <!-- ↓選擇信用卡結帳時才顯示 -->
                 <!-- <div class="cart-form--craditcard" v-if="payType === '信用卡'">
@@ -663,7 +662,7 @@
                 <!-- [END] 實體商品收件資訊 -->
                 <hr>
                 <!-- [START] GASH 點數領取方式 -->
-                <p class="cart-form__title h4"><span>3</span>GASH 點數領取 方式</p>
+                <p class="cart-form__title h4"><span>3</span>GASH 點數領取方式</p>
                 <div class="grid-x cart-form__subitem cart-form--payment align-start">
                   <!-- 手機登入顯示樣式 -->
                   <div class="radio-group grid-x">
